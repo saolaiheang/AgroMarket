@@ -33,3 +33,16 @@
   font-size: 1.1rem;
   margin-bottom: 5px;
 }
+.text-text-1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.card-card{
+  width: 900px;
+  margin: -400px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: -800px;
+}
+
