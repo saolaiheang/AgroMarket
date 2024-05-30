@@ -1,4 +1,4 @@
-const url = 'https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&pagination[CategoryID]=1&pagination[pageSize]=6';
+const url = 'https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&filters[CategoryID]=1&pagination[pageSize]=6';
 const apiToken = '0296b85241287136fd22a3dca55da1bc53cd23222b8e81b4fba63b7370a4d0ef8c959a5de21afdfa20e847c1bb2745f8cd4a814fc9e3792b833a99576615bc82bcc1a715739f30bc434f5a59291d2b0d9db871dbb426a1cbf7ad41a5f5d5a2e1059465d02c83c05bd6bca338ab8335c0a3e0a14270b7ec03384b96f9346c1c45';
 
 async function getApi() {
@@ -41,6 +41,7 @@ getApi()
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
                     <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
+                    <hr>
                     <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
                     <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
                   </div>
@@ -102,6 +103,7 @@ getApi1()
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
                     <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
+                    <hr>
                     <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
                     <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
                   </div>
@@ -163,6 +165,7 @@ getApi2()
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
                     <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
+                    <hr>
                     <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
                     <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
                   </div>
@@ -224,6 +227,7 @@ getApi3()
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
                     <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
+                    <hr>
                     <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
                     <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
                   </div>
