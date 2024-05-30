@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Category</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- <section>
+      <div class="btn"> Filter By Products
+        <button class="btn1" onclick="getApi()">Fruit</button>
+        <button class="btn1">Vegetable</button>
+        <button class="btn1">Tractor</button>
+        <button class="btn1">Fertilizer</button>
+      </div>
+    </section> -->
+
+
+    <section>
+      <div class="btn"> Filter By Products
+        <button class="btn1" onclick="fetchProducts('Fruit')">Fruit</button>
+        <button class="btn1" onclick="fetchProducts('Vegetable')">Vegetable</button>
+        <button class="btn1" onclick="fetchProducts('Tractor')">Tractor</button>
+        <button class="btn1" onclick="fetchProducts('Fertilizer')">Fertilizer</button>
+      </div>
+    </section>
+
+    <div class="container1" id="container1">
+      
+      <!-- <div class="card-1" id="card-1"> -->
+        <!-- <div class="box">
+          <div class="image">
+            <img src="images copy/apple.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="box">
+          <div class="image">
+            <img src="images copy/banana.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/apple.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box">
+          <div class="image">
+            <img src="images copy/salad.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/carrot.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/salad.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box">
+          <div class="image">
+            <img src="images copy/fertilizer1.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/fertilizer2.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/fertilizer1.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box">
+          <div class="image">
+            <img src="images copy/tractor1.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/tractor2.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/tractor1.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box">
+          <div class="image">
+            <img src="images copy/banana.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/carrot.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/fertilizer2.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box">
+          <div class="image">
+            <img src="images copy/fertilizer2.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/salad.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/apple.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="box">
+          <div class="image">
+            <img src="images copy/tractor2.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/fertilizer1.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images copy/carrot.png" alt="">
+          </div>
+          <div class="data">
+            <div class="left">
+              <h2>Apple</h2>
+              <p>Price: $5 per ker</p>
+              <p>Quantity: 1 kg</p>
+              <p>Province: PreyVeng</p>
+            </div>
+            <div class="right">
+              <div class="order">
+                <h3>Buy Now</h3>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      <!-- </div> -->
+      
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
