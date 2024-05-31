@@ -1,0 +1,67 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f8f9fa;
+}
+.nav-pills .nav-link.active {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.main {
+    margin-top: 80px;
+
+}
+
+.carousel-inner img {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paragrab {
+    padding: 20px;
+}
+
+.paragrab h1 {
+    font-size: 2.8rem;
+}
+
+.paragrab p {
+    font-size: 1.6rem;
+}
+
+.contact p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.contact p i {
+    margin-right: 10px;
+}
+.swiper-slider{
+    width: 100%;
+    margin-top: 10rem;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 10rem;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .article-card {
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
