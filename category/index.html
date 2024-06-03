@@ -25,7 +25,7 @@
       </a>
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="./category/index.html?category_id=all" onclick="getAllproduct()" class="nav-link">Products</a></li>
+        <li class="nav-item"><a href="/category/index.html?category_id=0" onclick="onClickCategory(0)" class="nav-link">Products</a></li>
       </ul>
     </header>
   
@@ -56,15 +56,30 @@
 </div>
 </div>
     <section>
-      <div class="btn" id="btn"> Products
+      <div class="btn" id="btn">
+        <label for="0">
+
+         <input type="radio" name="category"   onclick="onClickCategory(0)" id="0"> All
+        </label>
+        <label for="1">
+          <input type="radio" name="category"  onclick="onClickCategory(1)" id="1"> Fruite
+        </label>
+        <label for="2">
+          <input type="radio" name="category"  onclick="onClickCategory(2)" id="2"> Vegetable
+        </label>
+        <label for="3">
+          <input type="radio" name="category"  onclick="onClickCategory(3)" id="3"> Tractor
+        </label>
+       <label for="4">
+        <input type="radio" name="category"  onclick="onClickCategory(4)" id="4"> Fertilizer
+       </label>
+       
 
 
         
-        <button id="1"  class="btn1" onclick="onClickCategory('all')">All</button>
-        <button id="2" class="btn1" onclick="onClickCategory(1)">Fruit</button>
-        <button id="3" class="btn1" onclick="onClickCategory(2)">Vegetable</button>
-        <button id="4" class="btn1" onclick="onClickCategory(3)">Tractor</button>
-        <button id="5" class="btn1" onclick="onClickCategory(4)">Fertilizer</button>
+       
+
+
       </div>
      
       
