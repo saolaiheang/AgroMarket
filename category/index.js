@@ -145,7 +145,7 @@ try {
                 <p>Quantity: ${data[i].attributes.Quantity} kg</p>
                 <p>Province: ${data[i].attributes.OriginProvince}</p>
               </div>
-              <button class="btn-b"><a href="">Add to card</a></button>
+              <button class="btn-b"><a href="/pages/detail/detail.html?id=1">Add to card</a></button>
             </div>
           </div>
         
