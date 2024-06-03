@@ -37,6 +37,7 @@ getApi()
               <div class="col-md-4">
                 <div class="card position-relative">
                   <img src="${data[i].attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+                  ${data[i].attributes.Organic ?' <span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
@@ -99,6 +100,7 @@ getApi1()
               <div class="col-md-4">
                 <div class="card position-relative">
                   <img src="${data[i].attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+                  ${data[i].attributes.Organic ?' <span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
@@ -161,6 +163,7 @@ getApi2()
               <div class="col-md-4">
                 <div class="card position-relative">
                   <img src="${data[i].attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+                  ${data[i].attributes.Organic ?' <span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
@@ -223,6 +226,7 @@ getApi3()
               <div class="col-md-4">
                 <div class="card position-relative">
                   <img src="${data[i].attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+                  ${data[i].attributes.Organic ?' <span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>

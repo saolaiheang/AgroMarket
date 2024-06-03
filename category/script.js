@@ -64,26 +64,34 @@ function displayProduct(data) {
   card.innerHTML = ''; // Clear existing content
   data.forEach(product => {
     card.innerHTML += `
-      <div class="box">
-        <img src="${product.attributes.images.data[0].attributes.formats.thumbnail.url}" alt="">
-        ${product.attributes.Organic ? '<span class="badge organic-badge">Organic</span>' : ''}
-        <div class="box-1">
-          <div class="left">
-            <h2>${product.attributes.Name}</h2>
-            <p>Price: $${product.attributes.Price} per kg</p>
-            <p>Quantity: ${product.attributes.Quantity} kg</p>
-            <p>Province: ${product.attributes.OriginProvince}</p>
+    <div class="card-container">
+    <div class="card-card">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card position-relative">
+            <img src="${product.attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+            ${product.attributes.Organic ?' <span class="badge organic-badge">Organic</span>' : ''}
+            <div class="card-body">
+              <h5 class="card-title">${product.attributes.Name}</h5>
+              <p class="card-text">Quantity: ${product.attributes.Quantity} kg</p>
+              <p class="card-text">Price: $${product.attributes.Price} per kg</p>
+              <p class="card-text">Province: ${product.attributes.OriginProvince}</p>
+              <hr>
+              <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
+              <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
+            </div>
           </div>
-          <button class="btn-b"><a href="">Add to cart</a></button>
         </div>
       </div>
+    </div>
+  </div>
     `;
   });
 }
 
 // Function to handle category click
 function onClickCategory(catID) {
-  if (catID === 'all') {
+  if (catID === 0) {
     getAllProduct();
   } else {
     getProductByCategory(catID);

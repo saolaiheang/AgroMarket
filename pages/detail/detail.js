@@ -70,6 +70,23 @@ function feta (){
             
             
         }
+        let card = document.querySelector('.swiper-slide');
+        for(let i=0 ; i<data.data.length; i++){
+
+            if(data.data[i].id){
+               card.innerHTML += `
+               
+               
+               <div class="article-card">
+               
+             </div>
+         
+               
+               `
+                
+            }
+
+        }
 
     
     })
