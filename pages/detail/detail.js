@@ -45,11 +45,13 @@ function displayProduct(product) {
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="${product.attributes.images.data[0].attributes.url}" class="d-block w-100" alt="${product.attributes.Name}">
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 paragrab">
+
                     <h1>${product.attributes.Name}</h1>
                     <p class="lead">${product.attributes.CategoryID.data.attributes.Name}</p>
                     <p><strong>Price:</strong> $${product.attributes.Price}</p>
@@ -60,6 +62,7 @@ function displayProduct(product) {
                       <p><i class="fa fa-user"></i> Tra Jit</p>
                       <p><i class="fa fa-envelope"></i> tra.jit@institute.pse.ngo</p>
                       <p><i class="fa fa-phone"></i> +855 969 668 568</p>
+
                     </div>
                 </div>
                 `;
