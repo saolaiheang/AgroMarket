@@ -62,7 +62,7 @@ function displayProduct(product) {
                     <div class="contact">
                       <p><i class="fa fa-user"></i> Tra Jit</p>
                       <p><i class="fa fa-envelope"></i> tra.jit@institute.pse.ngo</p>
-                      <p><i class="fa fa-phone"></i> +855 969 668 568</p>
+                      <p><i class="fa fa-phone"></i> +855 90 53 9676</p>
 
                     </div>
                 </div>
