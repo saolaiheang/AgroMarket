@@ -13,8 +13,8 @@ if (categoryID) {
 }
 
 // keep
-const url3 = `https://jolly-angel-aabddcd512.strapiapp.com/api/products?filters[CategoryID][id][$eq]=${categoryID}&populate=*`;
-const apiToken3 = '98c9896be37b9f0448a29d269ebf385359d769807f0be6fa6d28094427f75a316c3d7acd3f8e4b782ee5f81ab16c1d171c6ae715ee024ecb02c7d10ddc0579412582ea9cf602a3dc9f170c7abb50b1608f38b24cf5d6186a1b2eb399919d247c09778073dc64bccb3e6ffbfbf9f94e3e5b95e352979ba082c36f4bc182089512';
+const url3 = `http://localhost:1338/api/products?filters[CategoryID][id][$eq]=${categoryID}&populate=*`;
+const apiToken3 = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
 
 // async function getApi() {
   
@@ -72,8 +72,8 @@ const apiToken3 = '98c9896be37b9f0448a29d269ebf385359d769807f0be6fa6d28094427f75
 let all = document.getElementById('1');
 
 async function getAllproduct(){
-  const url3 = `https://jolly-angel-aabddcd512.strapiapp.com/api/products?pagination[pageSize]=34&populate=*`;
-const apiToken3 = '98c9896be37b9f0448a29d269ebf385359d769807f0be6fa6d28094427f75a316c3d7acd3f8e4b782ee5f81ab16c1d171c6ae715ee024ecb02c7d10ddc0579412582ea9cf602a3dc9f170c7abb50b1608f38b24cf5d6186a1b2eb399919d247c09778073dc64bccb3e6ffbfbf9f94e3e5b95e352979ba082c36f4bc182089512';
+  const url3 = `http://localhost:1338/api/products?pagination[pageSize]=34&populate=*`;
+const apiToken3 = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
 try {
   const response = await fetch(url3, {
     method: 'GET',

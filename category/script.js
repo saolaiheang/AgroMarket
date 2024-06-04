@@ -12,10 +12,11 @@ if (categoryID == 0) {
   getProductByCategory(categoryID);
 }
 
+let baseUrl = 'http://localhost:1338';
 // Function to fetch products by category
 async function getProductByCategory(catID) {
-  const url = `https://jolly-angel-aabddcd512.strapiapp.com/api/products?filters[CategoryID][id][$eq]=${catID}&populate=*`;
-  const apiToken = '98c9896be37b9f0448a29d269ebf385359d769807f0be6fa6d28094427f75a316c3d7acd3f8e4b782ee5f81ab16c1d171c6ae715ee024ecb02c7d10ddc0579412582ea9cf602a3dc9f170c7abb50b1608f38b24cf5d6186a1b2eb399919d247c09778073dc64bccb3e6ffbfbf9f94e3e5b95e352979ba082c36f4bc182089512';
+  const url = `http://localhost:1338/api/products?filters[CategoryID][id][$eq]=${catID}&populate=*`;
+  const apiToken = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
   try {
     const response = await fetch(url, {
       method: 'GET',
@@ -37,8 +38,8 @@ async function getProductByCategory(catID) {
 
 // Function to fetch all products
 async function getAllProduct(){
-  const url = `https://jolly-angel-aabddcd512.strapiapp.com/api/products?pagination[pageSize]=34&populate=*`;
-  const apiToken = '889d67338d458ef1df9c0a1b103b79c0fde519048f4841c32395d5327588acbcc3f5bb86fec8cdfa877a2929e7e3e21ffa7c7ff51e9f52d48ce26879ae51eaf7142b2fc0c106cdf389381006d8c79e92a869741fd65e67627c153a70cf145801a76856143b9d06890830f1083a46e82a86e88dbe5d4f9e67e72d8539175daf86';
+  const url = `http://localhost:1338/api/products?pagination[pageSize]=34&populate=*`;
+  const apiToken = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
   try {
     const response = await fetch(url, {
       method: 'GET',
@@ -70,7 +71,7 @@ function displayProduct(data) {
       <div class="row">
         <div class="col-md-4">
           <div class="card position-relative">
-            <img src="${product.attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+            <img src="${baseUrl}${product.attributes.images.data[0].attributes.url}" class="card-img-top" alt="">
             ${product.attributes.Organic ? '<span class="badge organic-badge">Organic</span>' : ''}
             <div class="card-body">
               <h5 class="card-title">${product.attributes.Name}</h5>

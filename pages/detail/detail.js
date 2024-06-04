@@ -4,12 +4,13 @@ const params = window.location.search;
 const urlParams = new URLSearchParams(params);
 const catID = Number(urlParams.get("id"));
 
-const url = 'https://jolly-angel-aabddcd512.strapiapp.com/api/products/' + catID + '?populate=*';
+const url = 'http://localhost:1338/api/products/' + catID + '?populate=*';
+let baseUrl = 'http://localhost:1338';
 
 
 function feta() {
 
-    const api_key = 'd72da5635bb361e3e7fb3ec942daf980fc60ae992d5a32caa7d239a949e73655e6d33ab7ab1e2caa2c9b4b4ae12d1141225e16fd3de0a3c6598dfa45fc8bce53083c2f26febc041bb1545f646fdd2113cc3cb306581cc2238c101409823c880f969172dec98da293c71a096821b7987e7e6855bcf71711b71e5bbae7e22137e7';
+    const api_key = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
 
     fetch(url, {
         method: 'GET',
@@ -44,7 +45,7 @@ function displayProduct(product) {
                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="${product.attributes.images.data[0].attributes.url}" class="d-block w-100" alt="${product.attributes.Name}">
+                                <img src="${baseUrl}${product.attributes.images.data[0].attributes.url}" class="d-block w-100" alt="${product.attributes.Name}">
 
                             </div>
                         </div>
