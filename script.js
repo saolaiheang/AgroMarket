@@ -1,6 +1,8 @@
 
-const url = 'https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&filters[CategoryID]=1&pagination[pageSize]=6';
-const apiToken = '0296b85241287136fd22a3dca55da1bc53cd23222b8e81b4fba63b7370a4d0ef8c959a5de21afdfa20e847c1bb2745f8cd4a814fc9e3792b833a99576615bc82bcc1a715739f30bc434f5a59291d2b0d9db871dbb426a1cbf7ad41a5f5d5a2e1059465d02c83c05bd6bca338ab8335c0a3e0a14270b7ec03384b96f9346c1c45';
+const url = 'http://localhost:1338/api/products?populate=*&filters[CategoryID]=1&pagination[pageSize]=6';
+const apiToken = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
+
+let baseUrl = 'http://localhost:1338';
 
 async function getApi() {
   try {
@@ -36,7 +38,7 @@ getApi()
             <div class="row">
               <div class="col-md-4">
                 <div class="card position-relative">
-                  <img src="${data[i].attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+                  <img src="${baseUrl}${data[i].attributes.images.data[0].attributes.url}" class="card-img-top" alt="">
                   ${data[i].attributes.Organic ? '<span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
@@ -44,7 +46,7 @@ getApi()
                     <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
                     <hr>
-                    <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <div class="btn"><a href="/pages/detail/detail.html?id=${data[i].id}"><i class="fa-solid fa-cart-shopping"></i></a></div>
                     <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
                   </div>
                 </div>
@@ -55,15 +57,14 @@ getApi()
         `
       }
     }
-    console.log('Products data:', data);
   })
   .catch(error => {
     console.error('Error getting products data:', error);
   });
 
 //vegatables//
-const url1 = 'https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&filters[CategoryID]=2&pagination[pageSize]=6';
-const apiToken1 = '0296b85241287136fd22a3dca55da1bc53cd23222b8e81b4fba63b7370a4d0ef8c959a5de21afdfa20e847c1bb2745f8cd4a814fc9e3792b833a99576615bc82bcc1a715739f30bc434f5a59291d2b0d9db871dbb426a1cbf7ad41a5f5d5a2e1059465d02c83c05bd6bca338ab8335c0a3e0a14270b7ec03384b96f9346c1c45';
+const url1 = 'http://localhost:1338/api/products?populate=*&filters[CategoryID]=2&pagination[pageSize]=6';
+const apiToken1 = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
 
 async function getApi1() {
   try {
@@ -99,7 +100,7 @@ getApi1()
             <div class="row">
               <div class="col-md-4">
                 <div class="card position-relative">
-                  <img src="${data[i].attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+                  <img src="${baseUrl}${data[i].attributes.images.data[0].attributes.url}" class="card-img-top" alt="">
                   ${data[i].attributes.Organic ? '<span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
@@ -107,7 +108,7 @@ getApi1()
                     <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
                     <hr>
-                    <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <div class="btn"><a href="/pages/detail/detail.html?id=${data[i].id}"><i class="fa-solid fa-cart-shopping"></i></a></div>
                     <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
                   </div>
                 </div>
@@ -125,8 +126,8 @@ getApi1()
   });
 
   //trator//
-const url2 = 'https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&filters[CategoryID]=3&pagination[pageSize]=6';
-const apiToken2 = '0296b85241287136fd22a3dca55da1bc53cd23222b8e81b4fba63b7370a4d0ef8c959a5de21afdfa20e847c1bb2745f8cd4a814fc9e3792b833a99576615bc82bcc1a715739f30bc434f5a59291d2b0d9db871dbb426a1cbf7ad41a5f5d5a2e1059465d02c83c05bd6bca338ab8335c0a3e0a14270b7ec03384b96f9346c1c45';
+const url2 = 'http://localhost:1338/api/products?populate=*&filters[CategoryID]=3&pagination[pageSize]=6';
+const apiToken2 = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
 
 async function getApi2() {
   try {
@@ -162,7 +163,7 @@ getApi2()
             <div class="row">
               <div class="col-md-4">
                 <div class="card position-relative">
-                  <img src="${data[i].attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+                  <img src="${baseUrl}${data[i].attributes.images.data[0].attributes.url}" class="card-img-top" alt="">
                   ${data[i].attributes.Organic ? '<span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
@@ -170,7 +171,7 @@ getApi2()
                     <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
                     <hr>
-                    <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <div class="btn"><a href="/pages/detail/detail.html?id=${data[i].id}"><i class="fa-solid fa-cart-shopping"></i></a></div>
                     <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
                   </div>
                 </div>
@@ -188,8 +189,8 @@ getApi2()
   });
 
     //trator//
-const url3 = 'https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&filters[CategoryID]=4&pagination[pageSize]=6';
-const apiToken3 = '0296b85241287136fd22a3dca55da1bc53cd23222b8e81b4fba63b7370a4d0ef8c959a5de21afdfa20e847c1bb2745f8cd4a814fc9e3792b833a99576615bc82bcc1a715739f30bc434f5a59291d2b0d9db871dbb426a1cbf7ad41a5f5d5a2e1059465d02c83c05bd6bca338ab8335c0a3e0a14270b7ec03384b96f9346c1c45';
+const url3 = 'http://localhost:1338/api/products?populate=*&filters[CategoryID]=4&pagination[pageSize]=6';
+const apiToken3 = '88ecd654e73224296d3d605cd4a4136d863d8fe05b3be59a158a806b9666a40ec43d482042ad17d4b8dab66da1b15da9657938de1dc557d5b326e68e0569e33e6079e3ec02ab2af40f89338241fd3a01844ab8e3047f443dd6dc250a4c79a33c2ee49e29a40419ba71bb0d19cd843a7e2bf3bdb6f3f48d8c074ca313b0ecdf48';
 
 async function getApi3() {
   try {
@@ -215,9 +216,10 @@ async function getApi3() {
 
 getApi3()
   .then(data => {
-    console.log(data);
+    console.log("===========================")
     const card = document.getElementById('category-4');
     for (let i = 0; i <data.length; i++) { 
+      console.log("=====", data[i].attributes.images.data[0].attributes.url);
       if (data[i].id) {
         card.innerHTML += `
         <div class="card-container">
@@ -225,7 +227,7 @@ getApi3()
             <div class="row">
               <div class="col-md-4">
                 <div class="card position-relative">
-                  <img src="${data[i].attributes.images.data[0].attributes.formats.thumbnail.url}" class="card-img-top" alt="">
+                  <img src="${baseUrl}${data[i].attributes.images.data[0].attributes.url}" class="card-img-top" alt="">
                   ${data[i].attributes.Organic ? '<span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
@@ -233,7 +235,7 @@ getApi3()
                     <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
                     <hr>
-                    <div class="btn"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <div class="btn"><a href="/pages/detail/detail.html?id=${data[i].id}"><i class="fa-solid fa-cart-shopping"></i></a></div>
                     <div class="btn heart"><i class="fa-solid fa-heart"></i></div>
                   </div>
                 </div>
