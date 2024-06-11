@@ -167,8 +167,8 @@ getApi2()
                   ${data[i].attributes.Organic ? '<span class="badge organic-badge">Organic</span>' : ''}
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
-                    <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
-                    <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
+                    <p class="card-text">Quantity: ${data[i].attributes.Quantity} </p>
+                    <p class="card-text">Price: $${data[i].attributes.Price}<span style="color:red;"> ១គ្រឿង</span></p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
                     <hr>
                     <div class="btn"><a href="/pages/detail/detail.html?id=${data[i].id}"><i class="fa-solid fa-cart-shopping"></i></a></div>
@@ -232,7 +232,7 @@ getApi3()
                   <div class="card-body">
                     <h5 class="card-title">${data[i].attributes.Name}</h5>
                     <p class="card-text">Quantity: ${data[i].attributes.Quantity} kg</p>
-                    <p class="card-text">Price: $${data[i].attributes.Price} per kg</p>
+                    <p class="card-text">Price: $${data[i].attributes.Price} <span style="color:red;">១ការ៉ុង​​​</span>​ </p>
                     <p class="card-text">Province: ${data[i].attributes.OriginProvince}</p>
                     <hr>
                     <div class="btn"><a href="/pages/detail/detail.html?id=${data[i].id}"><i class="fa-solid fa-cart-shopping"></i></a></div>

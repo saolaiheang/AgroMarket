@@ -45,7 +45,7 @@ function displayProduct(product) {
                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="${baseUrl}${product.attributes.images.data[0].attributes.url}" class="d-block w-100" alt="${product.attributes.Name}">
+                                <img src="${baseUrl}${product.attributes.images.data[0].attributes.url}" class="d-block w-100 " alt="${product.attributes.Name}">
 
                             </div>
                         </div>
